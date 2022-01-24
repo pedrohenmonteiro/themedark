@@ -1,0 +1,88 @@
+:root {
+  --dark: #292c35;
+  --light: #f1f1f1;
+  --label: #111;
+}
+
+body {
+  background: var(--light);
+  display: grid;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  justify-items: center;
+  align-items: center;
+
+  box-sizing: border-box;
+}
+img {
+  width: 100%;
+}
+
+.button {
+  background: var(--label);
+  padding: 40px 80px;
+  position: relative;
+  border-radius: 40px;
+}
+
+.images {
+  position: absolute;
+  display: flex;
+  width: 140px;
+  gap: 16px;
+  top: 8px;
+  left: 8px;
+}
+
+.switcher {
+  background: var(--light);
+  border: none;
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  top: 10px;
+  left: 10px;
+  cursor: pointer;
+}
+
+body.active {
+  background-color: var(--dark);
+}
+
+@keyframes slidein {
+  from {
+    left: 10px;
+  }
+  to {
+    left: 90px;
+  }
+}
+
+@keyframes slideout {
+  from {
+    left: 90px;
+  }
+  to {
+    left: 10px;
+  }
+}
+
+@keyframes bg {
+  from {
+    background: var(--light);
+  }
+  to {
+    background: var(--dark);
+  }
+}
+
+@keyframes bg2 {
+  from {
+    background: var(--dark);
+  }
+  to {
+    background: var(--light);
+  }
+}
